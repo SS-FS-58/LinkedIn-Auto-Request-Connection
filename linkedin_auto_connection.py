@@ -67,8 +67,6 @@ class Bot(Thread):
                 connectable_buttons = self.driver.find_elements(By.XPATH, '//button/span[text()="Connect"]')
                 for connectable_button in connectable_buttons:
                     connectable_button.click()
-                    sleep(0.5)
-                    self.driver.find_element(By.XPATH, '//button/span[text()="Add a note"]').click()
                     self._click_button_with_label("Add a note")
                     self.driver.find_element(By.XPATH, '//textarea[@id="custom-message"]').send_keys(self.SEND_MESSAGE)
                     if self._click_button_with_label("Send"):
