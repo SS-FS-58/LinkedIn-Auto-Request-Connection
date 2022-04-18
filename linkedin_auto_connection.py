@@ -22,6 +22,7 @@ class Bot(Thread):
     def __init__(self):
         Thread.__init__(self)
         self._stop = Event()
+        self.total_request = 100
         self.setdriver()
     def stop(self): 
         self._stop.set() 
@@ -38,9 +39,17 @@ class Bot(Thread):
             self.driver.get(SEARCH_LINK)
         except Exception as e:
             print(e)
-    # def _
+    def _check_connectable_button(self):
+        connectable_buttons = self.driver.find_elements(By.XPATH, '//button/span[text()="Connect"]')
+        for connectable_button in connectable_buttons:
+            connectable_button.click()
+            sleep(0.5)
+            add_note_button = self.driver.find_element(By.XPATH, '//button/span[text()="Add a note"]')
+            add_note_button.click()
+        print("found connectable button")
     def run(self):
         print('Checking page')
+        self._check_connectable_button()
 
         
 
