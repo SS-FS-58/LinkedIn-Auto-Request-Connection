@@ -3,3 +3,5 @@ This repository would implement the function to send a connection request with a
 
 please set the parameters DEFAULT_PROFILE, SEARCH_LINK, SEND_MESSAGE on .env file.
 
+But they've now limited that too roughly 100 per week.
+
