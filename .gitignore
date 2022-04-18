@@ -111,6 +111,7 @@ env.bak/
 venv.bak/
 
 
+
 # Spyder project settings
 .spyderproject
 .spyproject
@@ -131,3 +132,4 @@ dmypy.json
 
 *.zip
 *.exe
+.vscode
