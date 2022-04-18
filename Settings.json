@@ -1,8 +1,0 @@
-{
-    "phone_number_file_path":"split_files",
-    "output_path":"output",
-    "phone_number_file_names":[
-        "4_states_10_50000_54999.txt",
-        "4_states_11_55000_59999.txt"
-    ]
-}
