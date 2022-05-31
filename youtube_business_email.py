@@ -72,7 +72,7 @@ class Bot(Thread):
             WebDriverWait(self.driver, 5).until(EC.frame_to_be_available_and_switch_to_it((By.XPATH,"//iframe[@title='reCAPTCHA']")))
             WebDriverWait(self.driver, 5).until(EC.element_to_be_clickable((By.XPATH, '//span[@id="recaptcha-anchor"]'))).click()
             self.driver.switch_to.default_content()
-            sleep(1)
+            sleep(2)
             WebDriverWait(self.driver, 5).until(EC.element_to_be_clickable((By.XPATH, '//button[@id="submit-btn"]'))).click()
             email = WebDriverWait(self.driver, 5).until(EC.presence_of_element_located((By.XPATH, '//a[@id="email"]'))).text
             # email = self.driver.find_element_by_xpath('//a[@id="email"]').text

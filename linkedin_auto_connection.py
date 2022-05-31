@@ -71,6 +71,7 @@ class Bot(Thread):
                     self.driver.find_element(By.XPATH, '//textarea[@id="custom-message"]').send_keys(self.SEND_MESSAGE)
                     if self._click_button_with_label("Send"):
                         self.today_count += 1
+                        print("today sending count: ", self.today_count)
                     else:
                         self._click_button_with_label("Cancel")
                         actions = ActionChains(self.driver)
