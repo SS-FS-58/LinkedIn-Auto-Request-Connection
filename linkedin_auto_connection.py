@@ -13,7 +13,7 @@ class Bot(Thread):
     def __init__(self):
         Thread.__init__(self)
         self._stop = Event()
-        self.total_request = 100
+        self.total_request = 92
         self.today_count = 0
         self.page = 1
         self.setdriver()
@@ -52,6 +52,7 @@ class Bot(Thread):
         self.page += 1
         self.driver.get(f'{self.SEARCH_LINK}&page={self.page}')
         print('next page : ', self.page)
+        sleep(2)
 
     def _click_button_with_label(self, label):
         try:
